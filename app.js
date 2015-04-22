@@ -7,9 +7,10 @@ var Promise = require('bluebird');
 
 var host = 'https://circle-artifacts.com/gh/';
 var projectUserName = process.env.CIRCLE_PROJECT_USERNAME; // github user name
+var repoName = process.env.CIRCLE_PROJECT_REPONAME; // github repo name
 var buildNum = process.env.CIRCLE_BUILD_NUM; // 20
 var targetDirPath = process.env.CIRCLE_ARTIFACTS; // /tmp/xxxx/
-var url = host + projectUserName + '/' + buildNum + '/artifacts/0/' + targetDirPath;
+var url = host + projectUserName + '/' + repoName + '/' + buildNum + '/artifacts/0' + targetDirPath;
 
 var userName = process.env.CIRCLE_USERNAME; // github user name
 
