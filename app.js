@@ -20,7 +20,7 @@ getXmlFiles(targetDirPath).then(function (files){
 
   var params = [];
   files.forEach(function (file){
-    params.push(getParsedXmlAsJs(targetDirPath + file));
+    params.push(getParsedXmlAsJs(targetDirPath + '/' + file));
   });
   return Promise.all(params);
 
